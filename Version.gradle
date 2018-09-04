@@ -1,0 +1,180 @@
+ext {
+    Android = [
+            // 版本号相关
+            versionCode      : 1,
+            versionName      : '1.0.0',
+            compileSdkVersion: 27,
+            minSdkVersion    : 19,
+            targetSdkVersion : 27,
+            javaVersion      : JavaVersion.VERSION_1_8,
+    ]
+    Version = [
+
+            // 相关依赖库版本
+            //Google Support库
+            supportVersion                    : '27.1.1',
+            kotlinVersion                     : '1.2.30',
+            junitVersion                      : '4.12',
+            multidexVersion                   : '1.0.3',
+            constraintLayoutVersion           : '1.1.2',
+
+            //okIo
+            okio                              : '1.15.0',
+
+            //okhttp网络连接库
+            okhttpVersion                     : '3.11.0',
+            //retrofit restful网络框架库,
+            retrofitVersion                   : '2.4.0',
+            //gson
+            gsonVersion                       : '2.8.5',
+            //rxJava 响应式编程
+            rxJava2Version                    : '2.1.14',
+            rxAndroidVersion                  : '2.0.2',
+            //基于rxjava的运行时权限请求库
+            rxPermissionsVersion              : '0.10.2',
+            //rxBindingVersion
+            rxBindingVersion                  : '2.1.1',
+            //rxRelay
+            rxRelay                           : '2.0.0',
+
+            //glide
+            glideVersion                      : '3.7.0',
+
+            //图片加载库
+            frescoVersion                     : '1.9.0',
+            picassoVersion                    : '2.71828',
+
+            //lottie动画加载
+            lottieVersion                     : '2.5.4',
+
+            //数据库，log日志库版本
+            greenDaoVersion                   : '3.2.2',
+            loggerVersion                     : '2.2.0',
+            timberVersion                     : '4.7.0',
+
+            //数据总线库版本
+            eventbusVersion                   : '3.1.1',
+            rxbusVersion                      : '1.0.6',
+
+            //leakcanary内存泄漏版本
+            leakcanaryAndroidVersion          : '1.5.4',
+
+            //注解库
+            butterknifeVersion                : '8.8.1',
+            daggerVersion                     : '2.16',
+            daggerCompilerVersion             : '2.16',
+
+            //recyclerView动画库
+            recyclerviewAnimatorsVersion      : '2.3.0',
+
+            //recyclerView分割线
+            recyclerviewFlexibleDividerVersion: '1.4.0',
+
+            // material风格的dialog
+            materialDialogsVersion            : '0.9.6.0',
+
+            // material风格的一个圆形进度条
+            materialishProgressVersion        : '1.7',
+
+            //支持手势缩放的图片View
+            photoViewVersion                  : '2.1.3',
+
+            //圆形图片库
+            circleimageviewVersion            : '2.2.0',
+            //自定义ui及res
+            geniusVersion                     : '2.0.1',
+
+            recyclerAdapterVersion            : '2.9.30'
+    ]
+    deps = [
+            //Google Support库
+            jUnit                      : 'junit:junit:' + Version.junitVersion,
+            supportV4                  : 'com.android.support:support-v4:' + Version.supportVersion,
+            supportV7                  : 'com.android.support:appcompat-v7:' + Version.supportVersion,
+            design                     : 'com.android.support:design:' + Version.supportVersion,
+            supportAnnotations         : 'com.android.support:support-annotations:' + Version.supportVersion,
+            gridlayoutV7               : 'com.android.support:gridlayout-v7:' + Version.supportVersion,
+            recyclerviewV7             : 'com.android.support:recyclerview-v7:' + Version.supportVersion,
+            cardviewV7                 : 'com.android.support:cardview-v7:' + Version.supportVersion,
+            multiDex                   : 'com.android.support:multidex:' + Version.multidexVersion,
+            constraintLayout           : 'com.android.support.constraint:constraint-layout:' + Version.constraintLayoutVersion,
+
+            //kotlin
+            kotlin                     : 'org.jetbrains.kotlin:kotlin-stdlib-jre7:' + Version.kotlinVersion,
+            //okIo
+            okio                       : 'com.squareup.okio:okio:' + Version.okio,
+
+            //okhttp网络连接库
+            okhttp                     : 'com.squareup.okhttp3:okhttp:' + Version.okhttpVersion,
+            okhttpUrlconnection        : 'com.squareup.okhttp3:okhttp-urlconnection:' + Version.okhttpVersion,
+            loggingInterceptor         : 'com.squareup.okhttp3:logging-interceptor:' + Version.okhttpVersion,
+            //retrofit restful网络框架库
+            retrofit                   : 'com.squareup.retrofit2:retrofit:' + Version.retrofitVersion,
+            converterGson              : 'com.squareup.retrofit2:converter-gson:' + Version.retrofitVersion,
+            converterJackson           : 'com.squareup.retrofit2:converter-jackson:' + Version.retrofitVersion,
+            converterScalars           : 'com.squareup.retrofit2:converter-scalars:' + Version.retrofitVersion,
+            adapterRxJava              : 'com.squareup.retrofit2:adapter-rxjava:' + Version.retrofitVersion,
+            //gson解析库
+            gson                       : 'com.google.code.gson:gson:' + Version.gsonVersion,
+            //rxJava 响应式编程
+            rxJava2                    : 'io.reactivex.rxjava2:rxjava:' + Version.rxJava2Version,
+            rxAndroid                  : 'io.reactivex.rxjava2:rxandroid:' + Version.rxAndroidVersion,
+            //基于rxjava的运行时权限请求库
+            rxPermission               : 'com.tbruyelle.rxpermissions:rxpermissions:' + Version.rxPermissionsVersion,
+            //rxBinding
+            rxBinding                  : 'com.jakewharton.rxbinding2:rxbinding:' + Version.rxBindingVersion,
+            rxBindingV4                : 'com.jakewharton.rxbinding2:rxbinding-support-v4:' + Version.rxBindingVersion,
+            rxBindingV7                : 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:' + Version.rxBindingVersion,
+            rxbindingDesign            : 'com.jakewharton.rxbinding2:rxbinding-design:' + Version.rxBindingVersion,
+            rxbindingRecyclerview      : 'com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:' + Version.rxBindingVersion,
+            //rxRelay
+            rxRelay                    : 'com.jakewharton.rxrelay2:rxrelay:' + Version.rxRelay,
+            //各种图片加载框架库
+            fresco                     : 'com.facebook.fresco:fresco:' + Version.frescoVersion,
+            picasso                    : 'com.squareup.picasso:picasso:' + Version.picassoVersion,
+            glide                      : 'com.github.bumptech.glide:glide:' + Version.glideVersion,
+            glideOkhttp                : 'com.github.bumptech.glide:okhttp3-integration:' + Version.glideVersion,
+            lottie                     : 'com.airbnb.android:lottie:' + Version.lottieVersion,
+            //GreenDao ORM数据库框架
+            greenDao                   : 'org.greenrobot:greendao:' + Version.greenDaoVersion,
+            //Logger日志框架
+            logger                     : 'com.orhanobut:logger:' + Version.loggerVersion,
+            //timber日志框架
+            timber                     : 'com.jakewharton.timber:timber:' + Version.timberVersion,
+            //eventbus总线框架
+            eventbus                   : 'org.greenrobot:eventbus:' + Version.eventbusVersion,
+            //rxbus总线框架
+            rxbus                      : 'com.hwangjr.rxbus:rxbus:' + Version.rxbusVersion,
+
+            //leakcanary 内存泄漏检测框架
+            leakcanaryAndroid          : 'com.squareup.leakcanary:leakcanary-android:' + Version.leakcanaryAndroidVersion,
+            leakcanaryAndroidNoOp      : 'com.squareup.leakcanary:leakcanary-android-no-op:' + Version.leakcanaryAndroidVersion,
+            leakcanarySupportFragment :'com.squareup.leakcanary:leakcanary-support-fragment:'+ Version.leakcanaryAndroidVersion,
+
+            //butterknife注解框架
+            butterknife                : 'com.jakewharton:butterknife:' + Version.butterknifeVersion,
+            butterknifeCompiler        : 'com.jakewharton:butterknife-compiler:' + Version.butterknifeVersion,
+            //dagger注解框架
+            dagger                     : 'com.google.dagger:dagger:' + Version.daggerVersion,
+            daggerCompiler             : 'com.google.dagger:dagger-compiler:' + Version.daggerCompilerVersion,
+
+            //recyclerView动画
+            recyclerviewAnimators      : 'jp.wasabeef:recyclerview-animators:' + Version.recyclerviewAnimatorsVersion,
+            //recyclerView分割线
+            recyclerviewFlexibleDivider: 'com.yqritc:recyclerview-flexibledivider:' + Version.recyclerviewFlexibleDividerVersion,
+            // material风格的dialog
+            materialDialogs            : 'com.afollestad.material-dialogs:core:' + Version.materialDialogsVersion,
+            // material风格的一个圆形进度条
+            materialishProgress        : 'com.pnikosis:materialish-progress:' + Version.materialishProgressVersion,
+            //支持手势缩放的一个图片View
+            photoView                  : 'com.github.chrisbanes:PhotoView:' + Version.photoViewVersion,
+            //圆形图片库
+            circleimageview            : 'de.hdodenhof:circleimageview:' + Version.circleimageviewVersion,
+            //自定义的ui及res库
+            genius_ui                  : "net.qiujuer.genius:ui:" + Version.geniusVersion,
+            genius_res                 : "net.qiujuer.genius:res:" + Version.geniusVersion,
+
+            recyclerAdapter            : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:' + Version.recyclerAdapterVersion
+    ]
+
+}

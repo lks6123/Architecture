@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.supportV7
+    testImplementation deps.jUnit
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    debugImplementation deps.leakcanaryAndroid
+    releaseImplementation deps.leakcanaryAndroidNoOp
+    api deps.design
+    api deps.retrofit
+    api deps.gson
+    api deps.rxJava2
+    api deps.rxAndroid
+    //butterKnife annotation
+    api deps.butterknife
+    api deps.glide
+}
