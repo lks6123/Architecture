@@ -90,7 +90,7 @@ import javax.xml.transform.stream.StreamSource;
  * json                     : log 字符串之 json
  * xml                      : log 字符串之 xml
  */
-public class LogUtils {
+public final class LogUtils {
 
     public static final int V = Log.VERBOSE;
     public static final int D = Log.DEBUG;

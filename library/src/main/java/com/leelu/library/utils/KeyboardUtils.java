@@ -20,7 +20,9 @@ import java.lang.reflect.Field;
  * Description :软件盘相关的Utils
  * <p>
  * showSoftInput                     : 动态显示软键盘
+ * showSoftInputUsingToggle          : 显示软键盘用 toggle
  * hideSoftInput                     : 动态隐藏软键盘
+ * hideSoftInputUsingToggle          : 隐藏软键盘用 toggle
  * toggleSoftInput                   : 切换键盘显示与否状态
  * isSoftInputVisible                : 判断软键盘是否可见
  * registerSoftInputChangedListener  : 注册软键盘改变监听器
@@ -76,6 +78,16 @@ public final class KeyboardUtils {
     }
 
     /**
+     * Show the soft input using toggle.
+     *
+     * @param activity The activity.
+     */
+    public static void showSoftInputUsingToggle(final Activity activity) {
+        if (isSoftInputVisible(activity)) return;
+        toggleSoftInput();
+    }
+
+    /**
      * Hide the soft input.
      *
      * @param activity The activity.
@@ -99,6 +111,16 @@ public final class KeyboardUtils {
                 (InputMethodManager) Utils.getApp().getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm == null) return;
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    /**
+     * Hide the soft input.
+     *
+     * @param activity The activity.
+     */
+    public static void hideSoftInputUsingToggle(final Activity activity) {
+        if (!isSoftInputVisible(activity)) return;
+        toggleSoftInput();
     }
 
     /**
