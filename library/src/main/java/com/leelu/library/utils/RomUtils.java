@@ -1,4 +1,4 @@
-package com.leelu.library.utils.subutils;
+package com.leelu.library.utils;
 
 import android.annotation.SuppressLint;
 import android.os.Build;

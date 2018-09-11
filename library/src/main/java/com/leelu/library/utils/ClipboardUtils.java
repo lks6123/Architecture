@@ -1,4 +1,4 @@
-package com.leelu.library.utils.subutils;
+package com.leelu.library.utils;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;

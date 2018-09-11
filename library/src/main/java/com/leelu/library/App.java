@@ -51,7 +51,7 @@ public class App extends Application {
         //Log日志工具初始化配置
         initLogConfig();
         //LeakCanary内存泄漏检测工具初始化
-        initLeakCanary();
+        if (BuildConfig.DEBUG) initLeakCanary();
         //App崩溃检测，并保存Log日志文件。
         initCrash();
         //HttpManager初始化
